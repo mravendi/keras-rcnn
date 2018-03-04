@@ -71,3 +71,13 @@ def load_data(path2data,data_group):
         json.dump(dictionaries, stream)
         
     return dictionaries
+
+
+##########################################################
+##########################################################
+## sample use
+dicts_train=load_data(path2dsb2018,"stage1_train")
+dicts_test=load_data(path2dsb2018,"stage1_test")
+
+
+
