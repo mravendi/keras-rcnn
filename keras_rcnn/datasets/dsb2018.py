@@ -9,6 +9,7 @@ def md5sum(pathname, blocksize=65536):
 
 
 def load_data(path2data,data_group):
+    # checking if it locally exists
     path2json=path2data+"{}.json".format(data_group)
     if os.path.exists(path2json):
         print('loading from local')
@@ -66,7 +67,8 @@ def load_data(path2data,data_group):
 
             imgobj_dict['objects'].append(obj_dict)
         dictionaries.append(imgobj_dict)
-
+    
+    # store as a json for future use
     with open(path2json, "w") as stream:
         json.dump(dictionaries, stream)
         
