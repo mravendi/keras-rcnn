@@ -31,7 +31,7 @@ def load_data(path2data,data_group):
         path2imgs=glob.glob(path2imgs)
         path2masks=glob.glob(path2masks)
 
-        img = imread(path2imgs[0])[:,:,:IMG_CHANNELS]
+        img = imread(path2imgs[0])[:,:,:3]
         # create image dict
         imgobj_dict={
             "image":{
